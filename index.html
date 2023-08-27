@@ -68,8 +68,8 @@
           </section>
           <section>
             <h2 class="text-white text-center">Trabajo con:</h2>
-            <div class="m-5">
-              <ul class="ul1 d-flex justify-content-around align-items-center flex-wrap">
+            <div class="m-5 border border-2 rounded-2 border-black fondo ">
+              <ul class="ul1 d-flex justify-content-around ps-0 align-items-center flex-wrap m-3">
                 <li>
                   <img class="rounded-2" src="./images/metodologiaSCRUM.avif" alt="Metodologia Agile SCRUM">
                 </li>
@@ -133,8 +133,10 @@
           <section>
             <h2 class="text-center text-white">Mis Proyectos:</h2>
             <div class="d-flex justify-content-around m-2 flex-wrap">
-              <div class="card m-2" style="width: 18rem;">
-                  <video src="./images/Proyectos/Lorem Ipsum _ Home - Google Chrome 2023-08-24 21-20-03.mp4"></video>
+              <div class="card m-2 fondo text-white p-1" style="width: 18rem;">
+                <img class="p-1 rounded-3" src="./images/Proyectos/Lorem Ipsum _ Contacto - Google Chrome 14_8_2023 22_51_57.png" alt="">
+                <button data-bs-toggle="modal" @click="openModal(projects[0])" data-bs-target="#exampleModal" class="w-25 btn border border-0 bg-transparent botonPlay"><img src="./images/youtube.svg" alt="Ver Video"></button>
+
                 <div class="card-body">
                   <h5 class="card-title text-center">PetShop "Lorem Ipsum"</h5>
                   <p class="card-text text-center">Diseño Front-End</p>
@@ -153,13 +155,27 @@
                     <li>Alertify</li>
                   </ul>
                 </div>
-                <div class="card-body">
-                  <a href="https://tatiguzman3036.github.io/PetShopLoremImpsut/index.html" class="card-link">Link Lorem Ipsum</a>
-                  <a href="https://github.com/Tatiguzman3036/PetShopLoremImpsut" class="card-link">Git Hub</a>
+                <div class="d-flex justify-content-around mb-3">
+                  <a href="https://tatiguzman3036.github.io/PetShopLoremImpsut/index.html" class="card-link boton3">Link Lorem Ipsum</a>
+                  <a href="https://github.com/Tatiguzman3036/PetShopLoremImpsut" class="card-link boton3">Git Hub</a>
                 </div>
               </div>
-              <div class="card m-2" style="width: 18rem;">
-                <video src="./images/Proyectos/Amazin Events_Home - Google Chrome 2023-08-24 22-24-45.mp4"></video>
+              <div class="modal fade bg-transparent" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content border border-white border-1">
+                    <div class="modal-header">
+                      <h2 class="modal-title fs-5 text-white" id="staticBackdropLabel"><strong>{{ currentProject.title }}</strong></h2>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video class="video-modal" :src="currentProject.video" controls></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card m-2 p-1 fondo text-white" style="width: 18rem;">
+                <img class="p-1 rounded-3" src="./images/Proyectos/Amazin Events_Home -foto.jpg" alt="">
+                <button data-bs-toggle="modal" @click="openModal(projects[1])" data-bs-target="#exampleModal" class="w-25 btn border border-0 bg-transparent botonPlay"><img src="./images/youtube.svg" alt="Ver Video"></button>
               <div class="card-body">
                 <h5 class="card-title text-center">"Amazing Events"</h5>
                 <p class="card-text text-center">Diseño Front-End</p>
@@ -173,13 +189,14 @@
                 <li class="">Boostrap</li>
                 <li class="">Axios</li>
               </ul>
-              <div class="card-body">
-                <a href="https://tatiguzman3036.github.io/amazin_events_Vue/" class="card-link">Link Amazing Events</a>
-                <a href="https://github.com/Tatiguzman3036/amazin_events_Vue" class="card-link">Git Hub</a>
+              <div class="d-flex justify-content-around mb-3">
+                <a href="https://tatiguzman3036.github.io/amazin_events_Vue/" class="card-link boton3">Link Amazing Events</a>
+                <a href="https://github.com/Tatiguzman3036/amazin_events_Vue" class="card-link boton3">Git Hub</a>
               </div>
             </div>
-            <div class="card m-2" style="width: 18rem;">
-              <video src="./images/Proyectos/Bank _LA GUZMI__Home - Google Chrome 2023-08-26 01-28-32.mp4"></video>
+            <div class="card m-2 p-1 fondo text-white" style="width: 18rem;">
+              <img class="p-1 rounded-3" src="./images/Proyectos/HomebankingLaGuzmi-foto.jpg" alt="">
+              <button data-bs-toggle="modal" @click="openModal(projects[2])" data-bs-target="#exampleModal" class="w-25 btn border border-0 bg-transparent botonPlay"><img src="./images/youtube.svg" alt="Ver Video"></button>
             <div class="card-body">
               <h5 class="card-title text-center">Homebanking "La Guzmi"</h5>
               <p class="card-text text-center">Desarrollo Full Stack</p>
@@ -202,13 +219,14 @@
                 <li class="">JSON</li>
               </ul>
             </div>
-            <div class="card-body">
-              <a href="https://homebankinglaguzmi.onrender.com/index.html" class="card-link">Link La Guzmi</a>
-              <a href="https://github.com/Tatiguzman3036/proyecto_homebanking_guzman_tatiana" class="card-link">Git Hub</a>
+            <div class="d-flex justify-content-around mb-3">
+              <a href="https://homebankinglaguzmi.onrender.com/index.html" class="card-link boton3">Link La Guzmi</a>
+              <a href="https://github.com/Tatiguzman3036/proyecto_homebanking_guzman_tatiana" class="card-link boton3">Git Hub</a>
             </div>
           </div>
-          <div class="card m-2" style="width: 18rem;">
-            <video src="./images/Proyectos/GOZO GrowShop - Google Chrome 2023-08-26 01-07-27.mp4"></video>
+          <div class="card m-2 p-1 fondo text-white" style="width: 18rem;">
+            <img class="p-1 rounded-3" src="./images/Proyectos/GOZOGrowShop-foto.jpg" alt="">
+            <button data-bs-toggle="modal" @click="openModal(projects[3])" data-bs-target="#exampleModal" class="w-25 btn border border-0 bg-transparent botonPlay"><img src="./images/youtube.svg" alt="Ver Video"></button>
           <div class="card-body">
             <h5 class="card-title text-center">GrowShop "Gozo"</h5>
             <p class="card-text text-center">Desarollo Full Stack</p>
@@ -232,28 +250,28 @@
               <li class="">Trello</li>
             </ul>
           </div>
-          <div class="card-body">
-            <a href="https://growshopgozo.onrender.com/index.html" class="card-link">Link Gozo</a>
-            <a href="https://github.com/Tatiguzman3036/GozoGrowshop_TrabajoGrupal" class="card-link">Git Hub</a>
+          <div class="d-flex justify-content-around mb-3">
+            <a href="https://growshopgozo.onrender.com/index.html" class="card-link boton3">Link Gozo</a>
+            <a href="https://github.com/Tatiguzman3036/GozoGrowshop_TrabajoGrupal" class="card-link boton3">Git Hub</a>
           </div>
         </div>
             </div>
           </section>
-          <section>
+          <section class="m-2">
             <h2 class="text-center text-white">Contacto:</h2>
             <div class="d-flex justify-content-around align-items-center flex-wrap">
-              <div>
-                <button><img src="./images/LinkedIn.svg" alt="Linkedin"><a href="https://www.linkedin.com/in/tatiana-guzm%C3%A1n-80b25a1a8/">Mi Linkedin</a></button>
-              </div>
-              <div>
-                <button><img src="./images/Github.svg" alt="GitHub"><a href="https://github.com/Tatiguzman3036">Mi GitHub</a></button>
-              </div>
-              <div>
-                <button><img src="./images/correo.png" alt="Correo"><a href="mailto:tatianaguadalupeguzmn@hotmail.com">tatianaguadalupeguzmn@hotmail.com</a></button>
-              </div>
-              <div>
-                <button></button>
-              </div>
+
+                <button class="rounded-2 fondo"><img src="./images/LinkedIn.svg" class="p-1" alt="Linkedin"><a href="https://www.linkedin.com/in/tatiana-guzm%C3%A1n-80b25a1a8/" class="text-decoration-none text-white bg-transparent me-2 ms-2 boton3">Mi Linkedin</a></button>
+
+
+                <button class="rounded-2 fondo"><img src="./images/Github.svg" alt="GitHub" class="p-1"><a href="https://github.com/Tatiguzman3036" class="text-decoration-none text-white me-2 ms-2 bg-transparent boton3">Mi GitHub</a></button>
+
+
+                <button class="rounded-2 fondo"><img src="./images/correo.png" alt="Correo"><a href="mailto:tatianaguadalupeguzmn@hotmail.com" class="text-decoration-none bg-transparent text-white me-2 ms-2 boton3">tatianaguadalupeguzmn@hotmail.com</a></button>
+
+
+                <button class="rounded-2 fondo"><img src="./images/descargar.svg" alt="Descargar" class="p-1"><a href="./images/cv/GUZMAN TATIANA GUADALUPE.pdf" download="CV Guzman Tatiana" title="Descargar CV" class="text-decoration-none text-white bg-transparent me-2 ms-2 boton3">Descargar CV</a></button>
+
             </div>
           </section>
         </main>

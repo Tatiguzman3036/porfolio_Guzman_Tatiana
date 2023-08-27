@@ -99,4 +99,39 @@
   .ul1{
     list-style-type: none !important;
   }
-  
+  .fondo {
+    background-color: #25232491 !important;
+  }
+  .botonPlay{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    left: 35%;
+  }
+  .botonPlay:hover , button:hover , .boton3:hover{
+    transform: scale(1.1);
+  }
+  .video-modal{
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.856);
+  }
+  .boton3 {
+    color: #f5f7f8 !important;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 0.5em 1.2em;
+    background: rgb(0, 0, 0);
+/*     border: 2px solid;
+    border-color: #000000; */
+    transition: all 1s ease;
+    position: relative;
+  }
+  .boton3:hover {
+    background: #fcfcfc;
+    color: #000000 !important;
+  }
