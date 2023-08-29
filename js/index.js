@@ -57,7 +57,7 @@ window.addEventListener("load", function () {
       },
       cambiarIdioma() {
         this.idioma = !this.idioma;
-        window.location.href = "../pages/ingles.html"
+        window.location.href = "https://tatiguzman3036.github.io/porfolio_Guzman_Tatiana/pages/ingles.html"
       },
       cambiarIdioma1(){
         this.idioma1 = !this.idioma1
