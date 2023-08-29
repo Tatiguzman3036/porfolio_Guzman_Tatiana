@@ -57,7 +57,7 @@ window.addEventListener("load", function () {
       },
       cambiarIdioma() {
         this.idioma = !this.idioma;
-        window.location.href = "../pages/ingles.html"
+        window.location.href = "../ingles.html"
       },
       cambiarIdioma1(){
         this.idioma1 = !this.idioma1
