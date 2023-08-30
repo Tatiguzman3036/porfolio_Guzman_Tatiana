@@ -179,12 +179,12 @@ nav {
   appearance: none;
   -webkit-appearance: none;
   border-radius: 9999px;
-  background-color: rgba(100, 116, 139, 0.377);
+  background-color: #0d6efd;
   transition: all .3s ease;
 }
 
 .check:checked {
-  background-color: rgb(100, 116, 139, 0.377);
+  background-color: #0d6efd;
 }
 
 .check::before {
@@ -204,7 +204,7 @@ nav {
 }
 
 .check:hover::before {
-  box-shadow: 0 0 0px 8px rgba(230, 217, 217, 0.15)
+  box-shadow: 0 0 0px 8px #0d6efd
 }
 
 .check:checked:hover::before {
