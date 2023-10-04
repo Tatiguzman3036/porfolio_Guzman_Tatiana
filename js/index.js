@@ -30,6 +30,24 @@ window.addEventListener("load", function () {
             video:'../images/Proyectos/GOZO GrowShop - Google Chrome 2023-08-26 01-07-27.mp4',
           }
         ],
+        projectsEspañol:[
+          {
+            title: 'PetShop "Lorem Ipsum"',
+            video:'./images/Proyectos/Lorem Ipsum _ Home - Google Chrome 2023-08-24 21-20-03.mp4',
+          },
+          {
+            title:'Eventos "Amazing Events"',
+            video:'./images/Proyectos/Amazin Events_Home - Google Chrome 2023-08-24 22-24-45.mp4',
+          },
+          {
+            title:'Homebanking "La Guzmi"',
+            video:'./images/Proyectos/Bank _LA GUZMI__Home - Google Chrome 2023-08-26 01-28-32.mp4',
+          },
+          {
+            title: 'GrowShop "Gozo"',
+            video:'./images/Proyectos/GOZO GrowShop - Google Chrome 2023-08-26 01-07-27.mp4',
+          }
+        ],
         currentProject: {},
         correo:{
           nombre: "",
@@ -43,7 +61,7 @@ window.addEventListener("load", function () {
     methods:{
       openModal(project) {
         this.currentProject = project;
-        $('#projectModal').modal('show'); // Mostrar el modal
+        $('#projectModal').modal('show');
       },
       enviar() {
         const asunto = encodeURIComponent(`Mensaje de ${this.correo.nombre}, correo : ${this.correo.email}`);
